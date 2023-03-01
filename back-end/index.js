@@ -1,11 +1,14 @@
 // Import the fastify framework
 const fastify = require("fastify");
+const cors = require("@fastify/cors");
 // Import "mongoose"
 const mongoose = require("mongoose");
 // Import our "User" model
 const User = require("./user");
 const Path = require("./elementPath");
 const app = fastify();
+
+app.register(cors, {});
 
 const mongoUrl =
   process.env.MONGODB_URI ||
