@@ -3,7 +3,8 @@ const fastify = require("fastify");
 // Import "mongoose"
 const mongoose = require("mongoose");
 // Import our "User" model
-const User = require("./User");
+const User = require("./user");
+const Path = require("./elementPath");
 const app = fastify();
 
 const mongoUrl =
@@ -35,6 +36,13 @@ app.post("/api/users", async (request, reply) => {
   let user = request.body;
   const result = await User.create(user);
   reply.send(user);
+});
+
+//Set the POST route "/api/paths" (envoi un path en bdd)
+app.post("/api/paths", async (request, reply) => {
+  let path = request.body;
+  const result = await Path.create(path);
+  reply.send(path);
 });
 
 // Start the server

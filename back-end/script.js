@@ -1,5 +1,9 @@
 document.addEventListener("click", (event) => {
   const result = [];
+  const innerText = {
+    innerText: event.target.innerText,
+  };
+  result.push(innerText);
   retrieveParents(event.target, result);
   console.log(JSON.stringify(result));
 });
