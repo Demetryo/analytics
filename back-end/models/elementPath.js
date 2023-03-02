@@ -4,6 +4,6 @@ let PathSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  innerText: String,
+  text: String,
 });
 module.exports = mongoose.model("Path", PathSchema);

@@ -4,8 +4,8 @@ const cors = require("@fastify/cors");
 // Import "mongoose"
 const mongoose = require("mongoose");
 // Import our "User" model
-const User = require("./user");
-const Path = require("./elementPath");
+const User = require("./models/user");
+const Path = require("./models/elementPath");
 const app = fastify();
 
 app.register(cors, {});

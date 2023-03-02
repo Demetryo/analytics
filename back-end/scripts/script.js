@@ -7,14 +7,14 @@ document.addEventListener("click", (event) => {
   for (var selector of result) {
     cssPath = cssPath.concat(selector.tag + " ");
   }
-  SendDatas(JSON.stringify(cssPath, innerText));
+  SendDatas(cssPath, innerText);
 });
 
 //envoie des datas en BDD via API
 function SendDatas(cssPath, innerText) {
   const datas = JSON.stringify({
     cssPath: cssPath,
-    innerText: innerText,
+    text: innerText,
   });
   const request = {
     method: "POST",
