@@ -1,10 +1,24 @@
+<script setup lang="ts">
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "../../node_modules/@headlessui/vue";
+import { UserCircleIcon } from "@heroicons/vue/24/outline";
+
+const userNavigation = [
+  { name: "Mon profil", href: "#" },
+  { name: "Se déconnecter", href: "/#/login" },
+];
+</script>
+
 <template>
   <nav class="bg-orange-600">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <img src="../images/logo-titre32blanc.png" />
           </div>
         </div>
         <div class="hidden md:block">
@@ -56,18 +70,3 @@
   </nav>
   <RouterView></RouterView>
 </template>
-
-<script setup lang="ts">
-import {
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from "../../node_modules/@headlessui/vue/";
-import { UserCircleIcon } from "@heroicons/vue/24/outline";
-
-const userNavigation = [
-  { name: "Mon profil", href: "#" },
-  { name: "Se déconnecter", href: "/#/login" },
-];
-</script>

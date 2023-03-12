@@ -1,13 +1,5 @@
 <script setup lang="ts">
 import { UserCircleIcon, TrashIcon, PencilIcon } from "@heroicons/vue/24/solid";
-import { useLink } from "vue-router";
-
-const { navigate } = useLink({ to: "/:id/modif" });
-
-function editProfile() {
-  // enregistrer modif dans bdd
-  navigate();
-}
 </script>
 
 <template>
@@ -22,7 +14,6 @@ function editProfile() {
           class="cursor-pointer my-4 h-6 w-6 rounded-lg hover:text-white hover:bg-orange-700 border-2 border-orange-700 transition ease-in-out hover:-translate-y-1 hover:scale-102 duration-150"
         />
         <PencilIcon
-          @click="editProfile"
           class="cursor-pointer my-4 h-6 w-6 rounded-lg hover:text-white hover:bg-orange-700 border-2 border-orange-700 transition ease-in-out hover:-translate-y-1 hover:scale-102 duration-150"
         />
       </div>
